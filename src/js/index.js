@@ -1,5 +1,12 @@
-import '../scss/index.scss';
-import SwaggerUI from './components/SwaggerUI';
-export default {
-  SwaggerUI
-};
+'use strict';
+
+// var pack = require('../../package');
+// var path = require('path');
+
+// module.exports = {
+//   version: pack.version,
+//   dist: path.resolve(__dirname, 'dist')
+// };
+
+import SwaggerUI from "./components/SwaggerUI";
+export default SwaggerUI;

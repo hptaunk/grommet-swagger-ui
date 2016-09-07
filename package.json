@@ -14,8 +14,12 @@
   "scripts": {
     "build": "gulp dist"
   },
+  "bin": {
+    "reactswagger": "./bin/grommetreact-swagger-ui.js"
+  },
   "dependencies": {
-    "grommet": "^0.6.9"
+    "grommet": "^0.6.9",
+    "swagger-client": "^2.1.18"
   },
   "devDependencies": {
     "babel-plugin-add-module-exports": "^0.1.2",

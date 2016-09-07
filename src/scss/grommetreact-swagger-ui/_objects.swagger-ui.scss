@@ -1,0 +1,322 @@
+
+$http-post-colors: #10a54a;
+$http-get-colors: #0f6ab4;
+$http-put-colors: #c5862b;
+$http-delete-colors: #a41e22;
+$http-patch-colors: #D38042;
+$http-options-colors: #0f6ab4;
+$http-head-colors: #ffd20f;
+
+.swagger {
+  &_mainview {
+    pre {
+      background-color: #fcf6db;
+      border: 1px solid #e5e0c6;
+    }
+
+    select,
+    input,
+    textarea {
+      background-color: #ffffff;
+      border-width: $input-focus-border-width;
+    }
+
+    textarea {
+      width: 100%;
+      height: 95%;
+      display: block;
+    }
+
+    input {
+      width: 310px;
+      padding: 4px 23px;
+
+      &:focus {
+        padding: 4px 23px;
+      }
+    }
+
+    .signature-container {
+      pre {
+        font-size: 0.85em;
+        line-height: 1.2em;
+        overflow: auto;
+        max-height: 200px;
+        cursor: pointer;
+      }
+
+      .grommetux-tabs {
+        margin: 0px;
+      }
+    }
+
+    .signature-container .propType {
+      color: #5555aa;
+    }
+
+    .signature-container pre:hover {
+      background-color: #ffffdd;
+    }
+
+    .signature-container ul.signature-nav {
+      display: block;
+      margin: 0;
+      padding: 0;
+    }
+
+    .signature-container ul.signature-nav li:last-child {
+      padding-right: 0;
+      border-right: none;
+    }
+
+    .signature-container ul.signature-nav li {
+      float: left;
+      margin: 0 5px 5px 0;
+      padding: 2px 5px 2px 0;
+      border-right: 1px solid #ddd;
+    }
+
+    .signature-container .propOpt {
+      color: #555;
+    }
+
+    .signature-container .snippet small {
+      font-size: 0.75em;
+    }
+
+    .signature-container .propOptKey {
+      font-style: italic;
+    }
+
+    .signature-container .description .strong {
+      font-weight: bold;
+      color: #000;
+      font-size: 0.9em;
+    }
+
+    .signature-container .description div {
+      font-size: 0.9em;
+      line-height: 1.5em;
+      margin-left: 1em;
+    }
+
+    .signature-container .description .stronger {
+      font-weight: bold;
+      color: #000;
+    }
+
+    .signature-container .description .propWrap .optionsWrapper {
+      border-spacing: 0;
+      position: absolute;
+      background-color: #ffffff;
+      border: 1px solid #bbbbbb;
+      display: none;
+      font-size: 11px;
+      max-width: 400px;
+      line-height: 30px;
+      color: black;
+      padding: 5px;
+      margin-left: 10px;
+    }
+
+    .signature-container .description .propWrap .optionsWrapper th {
+      text-align: center;
+      background-color: #eeeeee;
+      border: 1px solid #bbbbbb;
+      font-size: 11px;
+      color: #666666;
+      font-weight: bold;
+      padding: 5px;
+      line-height: 15px;
+    }
+
+    .signature-container .description .propWrap .optionsWrapper .optionName {
+      font-weight: bold;
+    }
+
+    .signature-container .description .propDesc.markdown > p:first-child,
+    .signature-container .description .propDesc.markdown > p:last-child {
+      display: inline;
+    }
+
+    .signature-container .description .propDesc.markdown > p:not(:first-child):before {
+      display: block;
+      content: '';
+    }
+
+    .signature-container .description span:last-of-type.propDesc.markdown > p:only-child {
+      margin-right: -3px;
+    }
+
+    .signature-container .propName {
+      font-weight: bold;
+    }
+
+    .showresponse {
+      pre {
+        margin-top: 5px;
+        padding: 10px;
+        font-size: 0.9em;
+        max-height: 400px;
+        overflow-y: auto;
+      }
+    }
+  }
+
+  &_mainview .grommetux-table-row {
+    vertical-align: top;
+  }
+
+  &_mainview .grommetux-accordion-panel__control {
+    display: none;
+  }
+
+  &_mainview .trynow {
+    width: 131px;
+    padding: 6px 12px;
+    margin-bottom: 8px;
+  }
+
+  &_operation {
+    padding-left: 24px;
+
+    & li {
+      margin-top: 10px;
+    }
+
+    .path {
+      padding-left: 18px;
+      font-weight: 400;
+    }
+
+    .header {
+      min-height: 34px;
+      margin-bottom: 0px;
+
+      .title {
+        width: 75px;
+        color: #ffffff;
+      }
+    }
+
+    .summary {
+      font-weight: 400;
+      margin: 0px 20px 0px 0px;
+    }
+
+    &_post {
+      background-color: lighten($http-post-colors, 58%);
+      border-color: lighten($http-post-colors, 48%);
+      border-width: 1px;
+      border-style: solid;
+
+      .header {
+        .title {
+          background-color: $http-post-colors;
+        }
+      }
+
+      .summary {
+        color: $http-post-colors;
+      }
+
+      span .grommetux-collapsible {
+        border-top-color: lighten($http-post-colors, 48%);
+        border-top-width: 1px;
+        border-top-style: solid;
+      }
+    }
+
+    &_get {
+      background-color: lighten($http-get-colors, 58%);
+      // border: 1px solid lighten($http-get-colors, 68%);
+      border-color: lighten($http-get-colors, 48%);
+      border-width: 1px;
+      border-style: solid;
+
+      .header {
+        .title {
+          background-color: $http-get-colors;
+        }
+      }
+
+      .summary {
+        color: $http-get-colors;
+      }
+
+      span .grommetux-collapsible {
+        // border-top: 1px solid $http-get-colors;
+        border-top-color: lighten($http-get-colors, 48%);
+        border-top-width: 1px;
+        border-top-style: solid;
+      }
+    }
+
+    &_put {
+      background-color: lighten($http-put-colors, 48%);
+      border-color: lighten($http-put-colors, 38%);
+      border-width: 1px;
+      border-style: solid;
+
+      .header {
+        .title {
+          background-color: $http-put-colors;
+        }
+      }
+
+      .summary {
+        color: $http-put-colors;;
+      }
+
+      span .grommetux-collapsible {
+        border-top-color: lighten($http-put-colors, 38%);
+        border-top-width: 1px;
+        border-top-style: solid;
+      }
+    }
+
+    &_delete {
+      background-color: lighten($http-delete-colors, 58%);
+      border-color: lighten($http-delete-colors, 48%);
+      border-width: 1px;
+      border-style: solid;
+
+      .header {
+        .title {
+          background-color: $http-delete-colors;
+        }
+      }
+
+      .summary {
+        color: $http-delete-colors;
+      }
+
+      span .grommetux-collapsible {
+        border-top-color: lighten($http-delete-colors, 68%);
+        border-top: 1px solid;
+      }
+    }
+
+    .response-content-type {
+      .grommetux-form-field__contents {
+        margin-left: 12px;
+
+        select {
+          padding: 0px 60px 0px 10px;
+          background-position: center right 8px;
+        }
+      }
+    }
+
+    .grommetux {
+      &-header {
+        min-height: 34px;
+      }
+
+      &-accordion-panel__header {
+        padding: 0px;
+      }
+    }
+  }
+
+}

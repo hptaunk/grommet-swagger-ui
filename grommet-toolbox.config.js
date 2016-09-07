@@ -24,7 +24,7 @@ export default {
     output: {
       filename: 'grommetreact-swagger-ui.min.js',
       libraryTarget: 'var',
-      library: 'GrommetSwaggerUI'
+      library: 'GrommetReactSwaggerUI'
     },
     resolve: {
       modulesDirectories: ['node_modules', 'src/js', 'src/scss']
